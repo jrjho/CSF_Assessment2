@@ -1,0 +1,40 @@
+<form [formGroup]="form" (ngSubmit)="upload()">
+    <table>
+
+
+        <tr>
+            <td>
+                <span>Name: </span>                    
+                <input type="text" size="30" formControlName="name"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                    <span>Title: </span>
+                    <input type="text" size="30" formControlName="title"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                    <span>Comments: </span>
+                    <input type="text" size="30" formControlName="comments"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                    <span>Archive: </span>
+                    <input type="file" size="30" (change)="onFileSelected($event)"/>
+            </td>
+            <!-- <input type="file" size="30" formControlName="comments"/> -->
+        </tr>
+        <tr>
+            <td>
+                <button mat-raised-button color="primary" type="button" (click)="goBack()">Back</button>
+
+                <button mat-raised-button color="warning" type="submit">Submit</button>
+            </td>
+        </tr>
+
+    </table>
+
+</form>
